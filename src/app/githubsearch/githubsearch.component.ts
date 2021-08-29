@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { Repositories } from '../repositories';
 
 @Component({
   selector: 'app-githubsearch',
@@ -8,7 +9,9 @@ import { User } from '../user';
 })
 export class GithubsearchComponent implements OnInit {
   user!: User;
-  public username!: string
+  public username!: string;
+  repositories!:Repositories;
+  reposArray!:any[];
 
   constructor() { }
 
