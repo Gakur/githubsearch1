@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Repositories } from '../repositories';
+import { GitServiceService } from '../git-service.service';
 
 @Component({
   selector: 'app-githubsearch',
   templateUrl: './githubsearch.component.html',
-  styleUrls: ['./githubsearch.component.css']
+  styleUrls: ['./githubsearch.component.css'],
+  providers: [GitServiceService]
 })
 export class GithubsearchComponent implements OnInit {
   user!: User;
@@ -14,7 +16,7 @@ export class GithubsearchComponent implements OnInit {
   reposArray!:any[];
   gitSearch: any;
 
-  constructor() { }
+  constructor(gitSearch: GitServiceService) { }
 
   searchProfile(){
     this.gitSearch.updateUser(this.username);
