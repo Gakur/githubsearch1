@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-githubsearch',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./githubsearch.component.css']
 })
 export class GithubsearchComponent implements OnInit {
+  user!: User;
+  public username!: string
 
   constructor() { }
 
