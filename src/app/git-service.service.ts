@@ -13,7 +13,7 @@ export class GitServiceService {
   repos!: Repositories;
   reposArray: any;
   BaseUrl = "https://api.github.com/users/";
-  Api = "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";
+  ApiKey = "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";
   http!: HttpClient;
   repositories!: Repositories;
 
