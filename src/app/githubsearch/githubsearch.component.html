@@ -14,19 +14,19 @@
     </form>
     <div class="count" *ngIf="user">
         <div class="panel">
-            <!-- <div class="panel-heading">
+            <div class="panel-heading">
         <h3 appHighlight>{{user.login}}</h3>
-      </div> -->
+      </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-3">
                         <img src="{{user.avatar_url}}" class="img-circle img-responsive" alt="{{user.login}}">
                     </div>
-                    <!-- <div class="col-sm-2">
+                    <div class="col-sm-2">
             <ul class="list-group">
-                <li class="list-group-item">{{user.login | bolden}} &mdash;{{user.name}}</li>
+                <li class="list-group-item">{{user.login | date}} &mdash;{{user.name}}</li>
             </ul>
-          </div> -->
+          </div>
                     <div class="col-sm-7">
                         <div>
                             <p>

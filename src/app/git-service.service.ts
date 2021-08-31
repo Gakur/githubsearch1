@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Repositories } from './repositories';
 import { User } from './user';
 
@@ -19,12 +20,13 @@ export class GitServiceService {
 
   constructor(private Http: HttpClient) {
     this.username = "Gakur";
-    this.user = new User("", "", "", 0, 0, 0, "");
+    this.user = new User("", "", "", 0, 0, 0, "",new Date());
     this.repos = new Repositories("", "", "");
     this.reposArray = [];
   }
   userRequest() {
     interface ApiResponse {
+      public_repos: number;
       name: string;
       login: string;
       avatar_url: string;
@@ -35,14 +37,14 @@ export class GitServiceService {
     }
 
     let promise = new Promise((resolve,reject)=>{
-      this.http.get(this.BaseUrl + this.username + '?access_token=' + this.Api).toPromise().then(response=>{
-        this.user.name = response.json().name;
-        this.user.login = response.json().login;
-        this.user.avatar_url = response.json().avatar_url;
-        this.user.followers = response.json().followers;
-        this.user.following = response.json().following;
-        this.user.public_repository = response.json().public_repos;
-        this.user.html_url = response.json().html_url;
+      this.http.get<ApiResponse>(this.BaseUrl + this.username + '?access_token=' + environment.ApiKey).toPromise().then(response=>{
+        this.user.name = response.name;
+        this.user.login = response.login;
+        this.user.avatar_url = response.avatar_url;
+        this.user.followers = response.followers;
+        this.user.following = response.following;
+        this.user.public_repository = response.public_repos;
+        this.user.html_url = response.html_url;
         resolve(response)
         console.log("one");
         console.log(this.user);
@@ -63,8 +65,8 @@ export class GitServiceService {
       description:string;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get(this.BaseUrl + this.username +"/repos" + '?access_token=' + this.Api).toPromise().then(response=> {
-        for (let repository of response.json()) {
+      this.http.get<ApiResponse>(this.BaseUrl + this.username +"/repos" + '?access_token=' + environment.ApiKey).toPromise().then(response=> {
+        for (let repository of this.reposArray) {
         this.repos.name = repository.name;
         this.repos.html_url = repository.html_url;
         this.repos.description = repository.description;

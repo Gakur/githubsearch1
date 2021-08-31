@@ -6,6 +6,7 @@ export class User {
         public followers: number,
         public following: number,
         public public_repository: number,
-        public html_url: string
+        public html_url: string,
+        public completeDate:Date
     ) { }
 }

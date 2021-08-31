@@ -25,7 +25,7 @@ import { DatePipe } from './date.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GitServiceService],
   bootstrap: [AppComponent]
