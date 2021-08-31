@@ -10,6 +10,7 @@ import { GithubsearchComponent } from './githubsearch/githubsearch.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeartbeatDirective } from './heartbeat.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeartbeatDirective } from './heartbeat.directive';
     GithubsearchComponent,
     AboutComponent,
     NavbarComponent,
-    HeartbeatDirective
+    HeartbeatDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
