@@ -9,13 +9,15 @@ import { GitServiceService } from './git-service.service';
 import { GithubsearchComponent } from './githubsearch/githubsearch.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HeartbeatDirective } from './heartbeat.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubsearchComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeartbeatDirective
   ],
   imports: [
     BrowserModule,
