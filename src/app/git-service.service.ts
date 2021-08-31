@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Repositories } from './repositories';
 import { User } from './user';
 
@@ -37,7 +36,7 @@ export class GitServiceService {
     }
 
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(this.BaseUrl + this.username + '?access_token=' + environment.ApiKey).toPromise().then(response=>{
+      this.http.get<ApiResponse>(this.BaseUrl + this.username + '?access_token=' + this.ApiKey).toPromise().then(response=>{
         this.user.name = response.name;
         this.user.login = response.login;
         this.user.avatar_url = response.avatar_url;
@@ -65,7 +64,7 @@ export class GitServiceService {
       description:string;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(this.BaseUrl + this.username +"/repos" + '?access_token=' + environment.ApiKey).toPromise().then(response=> {
+      this.http.get<ApiResponse>(this.BaseUrl + this.username +"/repos" + '?access_token=' + this.ApiKey).toPromise().then(response=> {
         for (let repository of this.reposArray) {
         this.repos.name = repository.name;
         this.repos.html_url = repository.html_url;
