@@ -14,9 +14,8 @@ export class GithubsearchComponent implements OnInit {
   public username!: string;
   repositories!:Repositories;
   reposArray!:any[];
-  gitSearch: any;
 
-  constructor(gitSearch: GitServiceService) { }
+  constructor(private gitSearch: GitServiceService) { }
 
   searchProfile(){
     this.gitSearch.updateUser(this.username);
@@ -31,4 +30,5 @@ export class GithubsearchComponent implements OnInit {
     this.gitSearch.repositoryRequest();
     this.reposArray = this.gitSearch.reposArray;
   }
+
 }
