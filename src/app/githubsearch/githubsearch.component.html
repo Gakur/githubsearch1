@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-sm-2">
                         <ul class="list-group">
-                            <li class="list-group-item">{{user.login}} &mdash;{{user.name}}</li>
+                            <li class="list-group-item">{{user.login}} {{user.name}}</li>
                         </ul>
                     </div>
                     <div class="col-sm-7">
@@ -32,10 +32,8 @@
                             <p>
                                 <span class="label" style="display: inline-block">Followers:{{user.followers}} </span>
                                 <span class="label" style="display: inline-block">Following: {{user.following}}</span>
-                                <span class="label"
-                                    style="display: inline-block">Repositories:{{user.public_repository}} </span>
-                                <a href="{{user.html_url}}" target="_blank" class="btn btn-md">View this profile on
-                                    GitHub</a>
+                                <span class="label" style="display: inline-block">Repositories:{{user.public_repository}} </span>
+                                <a href="{{user.html_url}}" target="_blank" class="btn btn-md">View this profile on GitHub</a>
                             </p>
                             <div class="describe">
                                 <div class="panel-heading">

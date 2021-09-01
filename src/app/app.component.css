@@ -1,5 +1,4 @@
-/* .main{
-    background-image: url("");
+.main{
     background-repeat: no-repeat;
     opacity: 0.9;
     filter: alpha(opacity=60);
@@ -7,4 +6,4 @@
 main:hover {
     opacity: 0.5;
     filter: alpha(opacity=50);
-} */
+}
