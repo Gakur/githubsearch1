@@ -11,24 +11,26 @@ import { GitServiceService } from '../git-service.service';
 })
 export class GithubsearchComponent implements OnInit {
   user!: User;
+  repository!: Repositories;
   public username!: string;
-  repositories!:Repositories;
-  reposArray!:any[];
+  reposArray!: any[];
+
 
   constructor(private gitSearch: GitServiceService) { }
 
-  searchProfile(){
+  searchProfile() {
     this.gitSearch.updateUser(this.username);
-    this.gitSearch.userRequest();
-    this.gitSearch.repositoryRequest();
-    this.reposArray = this.gitSearch.reposArray;
-     }
-  ngOnInit() {
-    this.gitSearch.userRequest();
-    this.user = this.gitSearch.user;
-
+    this.gitSearch.userRequest(this.username);
     this.gitSearch.repositoryRequest();
     this.reposArray = this.gitSearch.reposArray;
   }
+  ngOnInit() {
+  //   this.gitSearch.userRequest();
+  //   this.user = this.gitSearch.user;
 
+  //   this.gitSearch.repositoryRequest();
+  //   this.reposArray = this.gitSearch.reposArray;
+  // }
+
+}
 }
