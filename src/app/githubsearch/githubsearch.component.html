@@ -15,7 +15,7 @@
     <div class="count" *ngIf="user">
         <div class="panel">
             <div class="panel-heading">
-                <h3 appHighlight>{{user.login}}</h3>
+                <h3 appHeartbeat>{{user.login}}</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-sm-2">
                         <ul class="list-group">
-                            <li class="list-group-item">{{user.login | date}} &mdash;{{user.name}}</li>
+                            <li class="list-group-item">{{user.login}} &mdash;{{user.name}}</li>
                         </ul>
                     </div>
                     <div class="col-sm-7">

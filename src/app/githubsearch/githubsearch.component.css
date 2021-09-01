@@ -1,0 +1,29 @@
+.results {
+    background-image: url("https://images.unsplash.com/photo-1526392587392-d1627b6c134a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2xlYXIlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+.btn {
+    background-color: red;
+    filter: alpha(opacity=50);
+    font-weight: bolder;
+}
+.label{
+    margin:0 auto;
+    width: 300px;
+    text-align: left;
+}
+span{
+    display: inline-block; 
+    margin: 10px 0;
+}
+.panel {
+    font-size: 20px; 
+    opacity: 0.9;
+    filter: alpha(opacity=90);   
+  
+}
+.count{
+    font-size: 20px; 
+    opacity: 0.9;
+    filter: alpha(opacity=50);
+    font-weight: bolder;
+}

@@ -14,10 +14,10 @@ export class GitServiceService {
   }
 
   userRequest(username: string) {
-    return this.http.get("https://api.github.com/users/" + username + '?access_token=' + environment.accessToken)
+    return this.http.get("https://api.github.com/users/" + username)
   }
   repositoryRequest(username: string) {
-    return this.http.get('https://api.github.com/users/' + username + '/repos?access_token=' + environment.accessToken)
+    return this.http.get('https://api.github.com/users/' + username + '/repos')
   }
 }
 
