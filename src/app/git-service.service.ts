@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,14 +11,13 @@ export class GitServiceService {
 
 
   constructor(private http: HttpClient) {
-    console.log("Github init...")
   }
 
   userRequest(username: string) {
-    return this.http.get("https://api.github.com/users/" + username)
+    return this.http.get("https://api.github.com/users/" + username + '?access_token=' + environment.ApiKey)
   }
   repositoryRequest(username: string) {
-    return this.http.get('https://api.github.com/users/' + username + '/repos')
+    return this.http.get('https://api.github.com/users/' + username + '/repos?access_token=' + environment.ApiKey)
   }
 }
 

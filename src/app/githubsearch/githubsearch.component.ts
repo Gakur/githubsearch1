@@ -16,7 +16,7 @@ export class GithubsearchComponent implements OnInit {
 
 
   constructor(private gitSearch: GitServiceService) {
-    console
+    this.user=new User("","","",0,0,0,"",new Date())
   }
   ngOnInit(): void {
 
@@ -26,11 +26,9 @@ export class GithubsearchComponent implements OnInit {
     // this._githubService.updateUsername(this.username);
     this.gitSearch.userRequest(this.username).subscribe((user: any) => {
       this.user = user;
-      console.log(user);
     });
     this.gitSearch.repositoryRequest(this.username).subscribe((repos: any) => {
       this.reposArray = repos
-      console.log(repos)
     })
   }
 

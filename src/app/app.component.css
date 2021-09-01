@@ -1,0 +1,6 @@
+.main{
+    background-image: url("https://unsplash.com/photos/gQekwa7JK0k");
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter: alpha(opacity=60);
+}
