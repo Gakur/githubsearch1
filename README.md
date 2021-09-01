@@ -24,6 +24,6 @@ To access this project on your local files, you can clone it using these steps
 * If the user clicks on another user , a pag with  users profile is displayed and then they will have access to the users repository 
 * Incase the user fails to add the above information but still clicks on the search button,nothing will happen.
 # live link
-One can access the live website using this link  https://wizardly-curie-ae1e5c.netlify.app/
+One can access the live website using this link  https://gakur.github.io/githubsearch1/
 # License
 This project is under the MIT licence
